@@ -37,11 +37,10 @@ header {
 header a {
   text-decoration: none;
   color: white;
-  margin-left: 20px;
 }
 
 header .headline {
-  margin: 20px;
+  margin: 20px 28px;
   font-size: xx-large;
   font-weight: 700;
   letter-spacing: 0.1px;
@@ -50,7 +49,6 @@ header .headline {
 .nav-list {
   line-height: 100px;
   float: left;
-  margin-left: 20px;
   list-style: none;
 }
 
@@ -58,11 +56,12 @@ header .headline {
   /* width: 100px; */
   list-style: none;
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .nav-list-item a {
   margin: 0%;
+  padding: 0%;
   text-decoration: none;
   color: white;
   font-weight: 600;
@@ -84,7 +83,7 @@ header .headline {
 }
 
 .icon img {
-  width: 60px;
+  width: auto;
   height: 60px;
   margin: 5px 20px;
   -webkit-transition: all 0.3s ease;
@@ -112,7 +111,7 @@ footer p {
 /* メイン */
 main {
   margin: 0 auto;
-  color: #5e5e5e;
+  color: #5c5b5b;
   background-color: transration;
 }
 
@@ -131,6 +130,7 @@ section h1 {
   text-align: left;
   font-size: 30px;
   margin: 18px 0px;
+  padding-left: 12px;
 }
 
 section hr {
@@ -138,6 +138,10 @@ section hr {
   height: 1px;
   border: none;
   border-top: 3px #fbbbcc solid;
+}
+
+section .card {
+  padding-left: 12px;
 }
 
 section h2 {
@@ -172,31 +176,39 @@ article {
   padding-left: 20px;
 }
 
-/* Profile */
+/* About me */
 #About_me {
   display: flex;
-  /* text-align: left; */
-  width: 100%;
-}
-
-#About_me>* {
-  display: inline-block;
-  vertical-align: top;
-}
-
-#About_me img {
-  margin: 40px auto;
-  margin-right: auto;
-  width: 320px;
-  border-radius: 10%;
+  align-items: center;
+  max-width: 100%;
+  margin: 12px;
 }
 
 .card-img {
-  width: 50%;
-  height: 50%;
-  text-align: center;
+  flex: 0 0 auto;
+  /* min-width: 30%; */
+  width: 320px;
+}
+
+.card-img img {
+  height: auto;
+  width: 100%;
+  display: block;
+  border-radius: 10%;
 }
 
 .card-text {
-  width: 100%;
+  flex: 1;
+  /* テキスト部分が残りのスペースを占める */
+  padding: 0 20px;
+}
+
+@media (max-width: 1020px) {
+  #About_me {
+    display: block;
+  }
+
+  .card-text {
+    padding: 0;
+  }
 }
