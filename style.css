@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+:root {
+  --accent-color: #dfb1b6;
+}
+
 body {
   font-family: sans-serif;
   /* font-family: mr-eaves-sans, sans-serif; */
@@ -11,7 +15,7 @@ body {
 }
 
 body a {
-  color: #fbbbcc;
+  color: var(--accent-color);
 }
 
 /* 共通 */
@@ -26,7 +30,7 @@ header {
   height: 70px;
   width: 100%;
   padding: 15px 0;
-  background-color: #fbbbcc;
+  background-color: var(--accent-color);
   color: white;
   font-family: san;
   display: flex;
@@ -98,7 +102,7 @@ header .headline {
 footer {
   /* padding-top: 2px; */
   width: 100%;
-  background-color: #fbbbcc;
+  background-color: var(--accent-color);
   height: 80px;
   text-align: center;
 }
@@ -137,7 +141,7 @@ section hr {
   margin-top: 15px;
   height: 1px;
   border: none;
-  border-top: 3px #fbbbcc solid;
+  border-top: 3px var(--accent-color) solid;
 }
 
 section .card {
@@ -159,16 +163,13 @@ section p {
 }
 
 section ul {
-  padding-left: 1.5em;
+  /* padding-left: 1.5em; */
+  list-style-type: none;
   /* line-height: 1.5; */
 }
 
 section li {
   font-size: 20px;
-}
-
-section li::marker {
-  content: "■ ";
 }
 
 article {
